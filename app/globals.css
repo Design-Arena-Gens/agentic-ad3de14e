@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #ffffff;
+  --fg: #0b1220;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1220;
+    --fg: #e6eefc;
+  }
+}
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+/*******************************
+  Utilities
+*******************************/
+.container-p {
+  @apply container mx-auto px-4 sm:px-6 lg:px-8;
+}
+.shadow-soft {
+  box-shadow: 0 8px 24px rgba(2, 12, 27, 0.08);
+}
+.bg-grid {
+  background-image: url('/pattern-grid.svg');
+  background-size: 24px 24px;
+  mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, black 60%, transparent 100%);
+}
